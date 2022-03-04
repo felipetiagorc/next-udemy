@@ -3,22 +3,13 @@ import { PanelMenu } from 'primereact/panelmenu';
 export default function navbar() {
   const items = [
     {
-      label: 'File',
+      label: 'Advogados',
       icon: 'pi pi-fw pi-file',
       items: [
         {
-          label: 'New',
+          label: 'Consultar',
           icon: 'pi pi-fw pi-plus',
-          items: [
-            {
-              label: 'Bookmark',
-              icon: 'pi pi-fw pi-bookmark',
-            },
-            {
-              label: 'Video',
-              icon: 'pi pi-fw pi-video',
-            },
-          ],
+          url: '/advogados',
         },
         {
           label: 'Delete',
@@ -31,7 +22,7 @@ export default function navbar() {
       ],
     },
     {
-      label: 'Edit',
+      label: 'Presos',
       icon: 'pi pi-fw pi-pencil',
       items: [
         {
@@ -53,7 +44,7 @@ export default function navbar() {
       ],
     },
     {
-      label: 'Users',
+      label: 'Visitas',
       icon: 'pi pi-fw pi-user',
       items: [
         {
@@ -86,37 +77,10 @@ export default function navbar() {
         },
       ],
     },
-    {
-      label: 'Events',
-      icon: 'pi pi-fw pi-calendar',
-      items: [
-        {
-          label: 'Edit',
-          icon: 'pi pi-fw pi-pencil',
-          items: [
-            {
-              label: 'Save',
-              icon: 'pi pi-fw pi-calendar-plus',
-            },
-            {
-              label: 'Delete',
-              icon: 'pi pi-fw pi-calendar-minus',
-            },
-          ],
-        },
-        {
-          label: 'Archieve',
-          icon: 'pi pi-fw pi-calendar-times',
-          items: [
-            {
-              label: 'Remove',
-              icon: 'pi pi-fw pi-calendar-minus',
-            },
-          ],
-        },
-      ],
-    },
   ];
-
-  return <PanelMenu model={items} style={{ width: '300px' }} />;
+  return (
+    <nav>
+      <PanelMenu model={items} style={{ width: '300px' }} />
+    </nav>
+  );
 }
