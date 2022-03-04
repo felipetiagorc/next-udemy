@@ -1,5 +1,5 @@
 html {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 body {
@@ -16,9 +16,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .main {
-  margin-left: 400px;
-  width: 400px;
-  background-color: aqua;
+  margin-left: 210px;
+  margin-top: 50px;
+  background-color: #ccc;
 }
 nav {
   margin: 0px;
@@ -32,4 +32,43 @@ nav {
   background-color: lightblue;
   color: white;
   text-align: center;
+}
+
+.content {
+  min-height: 250px;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  min-height: 100%;
+  width: 230px;
+
+  background-color: aquamarine;
+}
+
+.topbar {
+  margin-bottom: 0;
+  margin-left: 230px;
+  border: none;
+  min-height: 50px;
+  border-radius: 0;
+  background-color: rgb(127, 157, 255);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
 }

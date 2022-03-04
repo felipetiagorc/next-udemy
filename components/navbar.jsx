@@ -79,8 +79,8 @@ export default function navbar() {
     },
   ];
   return (
-    <nav>
-      <PanelMenu model={items} style={{ width: '300px' }} />
+    <nav className='main-sidebar'>
+      <PanelMenu model={items} />
     </nav>
   );
 }

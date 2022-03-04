@@ -2,7 +2,10 @@ import 'primereact/resources/themes/bootstrap4-light-blue/theme.css'; //theme
 import 'primereact/resources/primereact.min.css'; //core css
 import 'primeicons/primeicons.css';
 import './../styles/global.css';
+import PrimeReact from 'primereact/api';
 
+PrimeReact.inputStyle = 'filled';
+PrimeReact.ripple = true;
 import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }) {

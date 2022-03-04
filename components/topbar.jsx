@@ -8,6 +8,7 @@ export default function Topbar() {
   return (
     <>
       <Menubar
+        className='topbar'
         start={
           <>
             <Link href={'/'}>
@@ -16,8 +17,8 @@ export default function Topbar() {
                   className='logo'
                   src='/brasao-sp.png'
                   alt='ss'
-                  width={70}
-                  height={70}
+                  width={50}
+                  height={50}
                 />
               </a>
             </Link>
