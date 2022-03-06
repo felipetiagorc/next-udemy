@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 80.5%;
 }
 
 body {
@@ -71,4 +71,16 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
 }

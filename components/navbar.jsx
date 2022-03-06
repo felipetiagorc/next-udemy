@@ -1,4 +1,5 @@
-import { PanelMenu } from 'primereact/panelmenu';
+import { InputText } from 'primereact/inputtext'
+import { PanelMenu } from 'primereact/panelmenu'
 
 export default function navbar() {
   const items = [
@@ -9,17 +10,17 @@ export default function navbar() {
         {
           label: 'Consultar',
           icon: 'pi pi-fw pi-plus',
-          url: '/advogados',
+          url: '/advogados'
         },
         {
           label: 'Delete',
-          icon: 'pi pi-fw pi-trash',
+          icon: 'pi pi-fw pi-trash'
         },
         {
           label: 'Export',
-          icon: 'pi pi-fw pi-external-link',
-        },
-      ],
+          icon: 'pi pi-fw pi-external-link'
+        }
+      ]
     },
     {
       label: 'Presos',
@@ -27,21 +28,21 @@ export default function navbar() {
       items: [
         {
           label: 'Left',
-          icon: 'pi pi-fw pi-align-left',
+          icon: 'pi pi-fw pi-align-left'
         },
         {
           label: 'Right',
-          icon: 'pi pi-fw pi-align-right',
+          icon: 'pi pi-fw pi-align-right'
         },
         {
           label: 'Center',
-          icon: 'pi pi-fw pi-align-center',
+          icon: 'pi pi-fw pi-align-center'
         },
         {
           label: 'Justify',
-          icon: 'pi pi-fw pi-align-justify',
-        },
-      ],
+          icon: 'pi pi-fw pi-align-justify'
+        }
+      ]
     },
     {
       label: 'Visitas',
@@ -49,11 +50,11 @@ export default function navbar() {
       items: [
         {
           label: 'New',
-          icon: 'pi pi-fw pi-user-plus',
+          icon: 'pi pi-fw pi-user-plus'
         },
         {
           label: 'Delete',
-          icon: 'pi pi-fw pi-user-minus',
+          icon: 'pi pi-fw pi-user-minus'
         },
         {
           label: 'Search',
@@ -65,22 +66,30 @@ export default function navbar() {
               items: [
                 {
                   label: 'Print',
-                  icon: 'pi pi-fw pi-print',
-                },
-              ],
+                  icon: 'pi pi-fw pi-print'
+                }
+              ]
             },
             {
               icon: 'pi pi-fw pi-bars',
-              label: 'List',
-            },
-          ],
-        },
-      ],
-    },
-  ];
+              label: 'List'
+            }
+          ]
+        }
+      ]
+    }
+  ]
   return (
-    <nav className='main-sidebar'>
-      <PanelMenu model={items} />
-    </nav>
-  );
+    <>
+      <nav className="main-sidebar">
+        <div>
+          <span className="p-input-icon-right">
+            <i className="pi pi-search"></i>
+            <input className="p-inputtext" type="text" />
+          </span>
+        </div>
+        <PanelMenu model={items} />
+      </nav>
+    </>
+  )
 }

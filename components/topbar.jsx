@@ -1,5 +1,4 @@
 import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import Link from 'next/link';
 import Image from 'next/image';
