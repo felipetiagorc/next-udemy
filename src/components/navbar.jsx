@@ -81,6 +81,7 @@ export default function navbar() {
   ]
   return (
     <>
+      <h2>PanelMenu</h2>
       <nav className="main-sidebar">
         <div>
           <span className="p-input-icon-right">

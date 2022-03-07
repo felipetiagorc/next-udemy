@@ -4,9 +4,10 @@ import Navbar from './navbar'
 
 describe('<navbar/>', () => {
   it('deve retornar heading', () => {
-    render(<Navbar />)
+    const { container } = render(<Navbar />)
     expect(
-      screen.getByRole('heading', { name: /react advanced/i })
+      screen.getByRole('heading', { name: /PanelMenu/i })
     ).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
