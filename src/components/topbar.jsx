@@ -1,30 +1,24 @@
-import { Menubar } from 'primereact/menubar';
-import { Button } from 'primereact/button';
-import Link from 'next/link';
-import Image from 'next/image';
+import { Menubar } from 'primereact/menubar'
+import { Button } from 'primereact/button'
+import Link from 'next/link'
 
 export default function Topbar() {
   return (
     <>
       <Menubar
-        className='topbar'
         start={
           <>
             <Link href={'/'}>
               <a>
-                <Image
-                  className='logo'
-                  src='/brasao-sp.png'
-                  alt='ss'
-                  width={50}
-                  height={50}
-                />
+                <p className="nomeApp">
+                  GPU | {`${process.env.NEXT_PUBLIC_PROJECT_NAME}`}
+                </p>
               </a>
             </Link>
           </>
         }
-        end={<Button label='Logout' icon='pi pi-power-off' />}
+        end={<Button label="Logout" icon="pi pi-power-off" />}
       />
     </>
-  );
+  )
 }

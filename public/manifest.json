@@ -1,0 +1,23 @@
+{
+  "name": "GPU PWA NEXT",
+  "short_name": "GPU App",
+  "icons": [
+    {
+      "src": "/icons/icon192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFFFFF",
+  "description": "Boilerplate Typescript, React, NextJs",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,27 +1,27 @@
 export const getStaticPaths = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  const data = await res.json();
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const data = await res.json()
 
-  const paths = data.map(preso => {
+  const paths = data.map((preso) => {
     return {
-      params: { id: preso.id.toString() },
-    };
-  });
+      params: { id: preso.id.toString() }
+    }
+  })
   return {
     paths,
-    fallback: false,
-  };
-};
+    fallback: false
+  }
+}
 
-export const getStaticProps = async ctx => {
-  const id = ctx.params.id;
-  const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
-  const data = await res.json();
+export const getStaticProps = async (ctx) => {
+  const id = ctx.params.id
+  const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id)
+  const data = await res.json()
 
   return {
-    props: { preso: data },
-  };
-};
+    props: { preso: data }
+  }
+}
 
 const Details = ({ preso }) => {
   return (
@@ -31,7 +31,7 @@ const Details = ({ preso }) => {
       <p>{preso.email}</p>
       <p>{preso.address.city}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Details;
+export default Details

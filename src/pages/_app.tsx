@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app'
-import 'primereact/resources/themes/bootstrap4-light-blue/theme.css' //theme
+import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css' //theme
 import 'primereact/resources/primereact.min.css' //core css
 import 'primeicons/primeicons.css'
 import './../styles/global.css'

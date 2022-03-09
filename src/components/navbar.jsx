@@ -81,12 +81,15 @@ export default function navbar() {
   ]
   return (
     <>
-      <h2>PanelMenu</h2>
       <nav className="main-sidebar">
         <div>
           <span className="p-input-icon-right">
             <i className="pi pi-search"></i>
-            <input className="p-inputtext" type="text" />
+            <InputText
+              className="p-inputtext filtraMenu"
+              type="text"
+              placeholder="Filtra Menu"
+            />
           </span>
         </div>
         <PanelMenu model={items} />

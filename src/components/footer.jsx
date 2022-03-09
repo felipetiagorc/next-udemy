@@ -1,3 +1,3 @@
 export default function Topbar() {
-  return <div className='footer'>Footer</div>;
+  return <div className="footer">Footer</div>
 }
