@@ -11,14 +11,10 @@
     "test:watch": "npm test --watch"
   },
   "dependencies": {
-    "formik": "^2.2.9",
     "next": "12.1.0",
     "next-auth": "^4.2.1",
-    "primeicons": "^5.0.0",
-    "primereact": "^7.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-transition-group": "^4.4.1",
     "styled-components": "^5.3.3",
     "swr": "^1.2.2"
   },
