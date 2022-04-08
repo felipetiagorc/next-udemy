@@ -1,5 +1,19 @@
-import Main from 'components/Main'
+import { InfoOutline } from '@styled-icons/evaicons-outline/InfoOutline'
+import LinkWrapper from 'components/LinkWrapper'
+import dynamic from 'next/dynamic'
+import Layout from '../components/layout'
+
+const Map = dynamic(() => import('components/Map'), { ssr: false })
 
 export default function Home() {
-  return <Main />
+  return (
+    <div id="mapa">
+      <Layout>
+        <LinkWrapper href="/about">
+          <InfoOutline size={32} aria-label="About" />
+        </LinkWrapper>
+        <Map />
+      </Layout>
+    </div>
+  )
 }
