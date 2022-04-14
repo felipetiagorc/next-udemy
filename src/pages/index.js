@@ -12,7 +12,18 @@ export default function Home() {
         <LinkWrapper href="/about">
           <InfoOutline size={32} aria-label="About" />
         </LinkWrapper>
-        <Map />
+        <Map places={[
+          {
+            id: '1',
+            nome: 'Corevali',
+            slug: 'corevali',
+            location: {
+              latitude: -23.0102894,
+              longitude: -45.5489503          
+            }
+          }
+
+        ]}/>
       </Layout>
     </div>
   )
