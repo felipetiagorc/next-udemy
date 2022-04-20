@@ -11,5 +11,8 @@ module.exports = withPWA({
     dest: 'public',
     runtimeCaching,
     disable: !isProd
-  }
+  },
+  images: {
+    domains: ['media.graphassets.com'],
+  },
 })

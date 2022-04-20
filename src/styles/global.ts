@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
-  html, body, #__next {
+  html, body, #__next, .mapa {
     height: 100%;
     background: var(--background);
     color: var(--white);
