@@ -12,6 +12,7 @@ type Place = {
     longitude: number
   }
 }
+
 export type MapProps = {
   places?: Place[]
 }

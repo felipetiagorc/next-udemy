@@ -7,7 +7,7 @@ import Head from 'next/head'
 // import PrimeReact from 'primereact/api'
 // PrimeReact.inputStyle = 'filled'
 // PrimeReact.ripple = true
-import GlobalStyles from 'styles/global'
+// import GlobalStyles from 'styles/global'
 // import Layout from '../components/layout'
 
 function App({ Component, pageProps }: AppProps) {
@@ -23,7 +23,7 @@ function App({ Component, pageProps }: AppProps) {
 
         <meta name="theme-color" content="#06092b" />
       </Head>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <Component {...pageProps} />
     </>
     // </Layout>
