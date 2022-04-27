@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { createGlobalStyle } from "styled-components"
-// import Layout from '../components/layout'
+import { createGlobalStyle } from 'styled-components'
+import Layout from '../templates/Layout'
 import './../styles/global.css'
 
 const GlobalStyle = createGlobalStyle`
@@ -25,27 +25,25 @@ const temaPadrao = {
   }
 }
 
-
-
 function App({ Component, pageProps }: AppProps) {
   return (
     // Layout 'persist' across all pages
-    // <Layout>
-    <>
-    <GlobalStyle />
-    
-      <Head>
-        <title>GPU-Next</title>
-        <link rel="shortcut icon" href="/img/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/img/favicon-16x16.png" />
-        <link rel="manifest" href="/manifest.json" />
+    <Layout>
+      <>
+        <GlobalStyle />
 
-        <meta name="theme-color" content="#06092b" />
-      </Head>
+        <Head>
+          <title>GPU-Next</title>
+          <link rel="shortcut icon" href="/img/favicon-16x16.png" />
+          <link rel="apple-touch-icon" href="/img/favicon-16x16.png" />
+          <link rel="manifest" href="/manifest.json" />
 
-      <Component {...pageProps} />
-    </>
-    // </Layout>
+          <meta name="theme-color" content="#06092b" />
+        </Head>
+
+        <Component {...pageProps} />
+      </>
+    </Layout>
   )
 }
 
