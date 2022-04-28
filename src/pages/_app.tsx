@@ -1,49 +1,53 @@
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { createGlobalStyle } from 'styled-components'
-import Layout from '../templates/Layout'
-import './../styles/global.css'
+import Layout from '../templates/Layout/index'
 
-const GlobalStyle = createGlobalStyle`
-* {
-  margins: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+const colors = {
+  azul: {
+    600: '#1CADF4',
+    900: '#003366'
+  },
+  cinza: {
+    300: '#eeeeee',
+    600: '#737373',
+    900: '#505050'
+  },
+  preto: {
+    900: '#000000'
+  },
 
-html, body, #__next{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  height: 100%;
-}
-`
+  verde: {
+    300: '#008200',
+    600: '#205527'
+  },
 
-const temaPadrao = {
-  colors: {
-    primary: '#0070f3'
+  vermelho: {
+    600: '#db0011'
   }
 }
+
+const theme = extendTheme({ colors })
 
 function App({ Component, pageProps }: AppProps) {
   return (
     // Layout 'persist' across all pages
-    <Layout>
-      <>
-        <GlobalStyle />
+    <>
+      <ChakraProvider theme={theme}>
+        <Layout>
+          <Head>
+            <title>GPU-Next</title>
+            <link rel="shortcut icon" href="/img/favicon-16x16.png" />
+            <link rel="apple-touch-icon" href="/img/favicon-16x16.png" />
+            <link rel="manifest" href="/manifest.json" />
 
-        <Head>
-          <title>GPU-Next</title>
-          <link rel="shortcut icon" href="/img/favicon-16x16.png" />
-          <link rel="apple-touch-icon" href="/img/favicon-16x16.png" />
-          <link rel="manifest" href="/manifest.json" />
+            <meta name="theme-color" content="#06092b" />
+          </Head>
 
-          <meta name="theme-color" content="#06092b" />
-        </Head>
-
-        <Component {...pageProps} />
-      </>
-    </Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </>
   )
 }
 

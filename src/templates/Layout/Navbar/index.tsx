@@ -1,101 +1,52 @@
-import { PanelMenu } from 'primereact/panelmenu'
-import * as S from './styles'
-export default function NavBar() {
-  const items = [
-    {
-      label: 'Mapa',
-      icon: '',
-      url: '/mapa'
-    },
+import {
+  Avatar,
+  Divider,
+  Flex,
+  Heading,
+  IconButton,
+  Text
+} from '@chakra-ui/react'
+import { useState } from 'react'
+import { FiMenu } from 'react-icons/fi'
 
-    {
-      label: 'Advogados',
-      icon: 'pi pi-fw pi-file',
-      items: [
-        {
-          label: 'Consultar',
-          icon: 'pi pi-fw pi-plus',
-          url: '/advogados'
-        },
-        {
-          label: 'Delete',
-          icon: 'pi pi-fw pi-trash'
-        },
-        {
-          label: 'Export',
-          icon: 'pi pi-fw pi-external-link'
-        }
-      ]
-    },
-    {
-      label: 'Presos',
-      icon: 'pi pi-fw pi-pencil',
-      items: [
-        {
-          label: 'Left',
-          icon: 'pi pi-fw pi-align-left'
-        },
-        {
-          label: 'Right',
-          icon: 'pi pi-fw pi-align-right'
-        },
-        {
-          label: 'Center',
-          icon: 'pi pi-fw pi-align-center'
-        },
-        {
-          label: 'Justify',
-          icon: 'pi pi-fw pi-align-justify'
-        }
-      ]
-    },
-    {
-      label: 'Visitas',
-      icon: 'pi pi-fw pi-user',
-      items: [
-        {
-          label: 'New',
-          icon: 'pi pi-fw pi-user-plus'
-        },
-        {
-          label: 'Delete',
-          icon: 'pi pi-fw pi-user-minus'
-        },
-        {
-          label: 'Search',
-          icon: 'pi pi-fw pi-users',
-          items: [
-            {
-              label: 'Filter',
-              icon: 'pi pi-fw pi-filter',
-              items: [
-                {
-                  label: 'Print',
-                  icon: 'pi pi-fw pi-print'
-                }
-              ]
-            },
-            {
-              icon: 'pi pi-fw pi-bars',
-              label: 'List'
-            }
-          ]
-        }
-      ]
-    }
-  ]
+export default function NavBar() {
+  const [navSize, setNavSize] = useState('large')
   return (
-    <S.NavBar>
-      <h2>PanelMenu</h2>
-      <nav className="main-sidebar">
-        <div>
-          <span className="p-input-icon-right">
-            <i className="pi pi-search"></i>
-            <input className="p-inputtext" type="text" />
-          </span>
-        </div>
-        <PanelMenu model={items} />
-      </nav>
-    </S.NavBar>
+    <Flex
+      pos="sticky"
+      left="5"
+      h="95vh"
+      marginTop="2.5vh"
+      boxShadow="0 4px 12px 0 rgba(0,0,0,0.05)"
+      w="200px"
+      flexDir="column"
+      justifyContent="space-between"
+    >
+      <Flex p="5%" flexDir="column" alignItems="flex-start" as="nav">
+        <IconButton
+          background="none"
+          mt={5}
+          _hover={{ background: 'none' }}
+          aria-label="botao"
+          icon={<FiMenu />}
+          onClick={() => {
+            if (navSize == 'small') setNavSize('large')
+            else setNavSize('small')
+          }}
+        />
+      </Flex>
+      <Flex p="5%" flexDir="column" w="100%" alignItems="flex-start" mb="4">
+        <Divider />
+        <Flex mt="4" align="center">
+          <Avatar size="sm" src="" />
+          <Flex flexDirection="column" ml="4">
+            <Heading as="h3" size="sm">
+              Silvio
+            </Heading>
+            <Text>Admin</Text>
+          </Flex>
+        </Flex>
+      </Flex>
+    </Flex>
   )
 }
