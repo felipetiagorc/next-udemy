@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import Layout from '../templates/Layout/index'
+import Layout from '../components/Layout/index'
 import './../styles/global.css'
 
 const temaPadrao = {

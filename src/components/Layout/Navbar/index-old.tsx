@@ -1,4 +1,4 @@
-import { PanelMenu } from 'primereact/panelmenu'
+// import { PanelMenu } from 'primereact/panelmenu'
 import * as S from './styles'
 export default function NavBar() {
   const items = [
@@ -98,7 +98,7 @@ export default function NavBar() {
             />
           </span>
         </div>
-        <PanelMenu model={items} />
+        {/* <PanelMenu model={items} /> */}
       </nav>
     </S.NavBar>
   )

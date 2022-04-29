@@ -1,7 +1,7 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import Layout from '../templates/Layout/index'
+import Layout from '../components/Layout'
 
 const colors = {
   azul: {
