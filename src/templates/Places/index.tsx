@@ -41,7 +41,7 @@ export default function PlaceTemplate({ place }: PlaceTemplateProps) {
                 key={`photo-${index}`}
                 src={image.url}
                 alt={place.name}
-                width={1000}
+                width={800}
                 height={600}
                 quality={75}
                 layout={'responsive'}
