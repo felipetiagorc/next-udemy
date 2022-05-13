@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled, { css } from 'styled-components'
 
 export const SidebarContainer = styled.div`
@@ -74,3 +75,16 @@ export const MyPieChart = styled(PieChart)`
 export const MyReceipt = styled(Receipt)`
     ${sharedStyle}
 `
+=======
+import styled from 'styled-components'
+
+export const NavBar = styled.aside`
+  position: static;
+  background-color: grey;
+  margin-left: 0%;
+  height: 50vh;
+  max-width: 40vh;
+  font-size: var(--medium);
+  line-height: var(--medium);
+`
+>>>>>>> cfc9beb386e8f33888c928d81881b69962b0dbc0

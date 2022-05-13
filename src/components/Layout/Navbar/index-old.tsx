@@ -1,6 +1,6 @@
-import { PanelMenu } from 'primereact/panelmenu'
-
-export default function navbar() {
+// import { PanelMenu } from 'primereact/panelmenu'
+import * as S from './styles'
+export default function NavBar() {
   const items = [
     {
       label: 'Mapa',
@@ -85,17 +85,21 @@ export default function navbar() {
     }
   ]
   return (
-    <>
+    <S.NavBar>
       <h2>PanelMenu</h2>
       <nav className="main-sidebar">
         <div>
           <span className="p-input-icon-right">
             <i className="pi pi-search"></i>
-            <input className="p-inputtext" type="text" />
+            <input
+              className="p-inputtext"
+              type="text"
+              placeholder="Pesquisar"
+            />
           </span>
         </div>
-        <PanelMenu model={items} />
+        {/* <PanelMenu model={items} /> */}
       </nav>
-    </>
+    </S.NavBar>
   )
 }

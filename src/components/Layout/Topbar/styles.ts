@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+<<<<<<< HEAD
 export const TopbarContainer = styled.div`
     width: 100%;
     height: 50px;
@@ -53,3 +54,12 @@ export const Avatar = styled.img`
     border-radius: 50%;
     cursor: pointer;
 `
+=======
+export const Topbar = styled.header`
+  height: 10vh;
+  max-width: var(--container);
+  margin: auto;
+  font-size: var(--medium);
+  line-height: var(--medium);
+`
+>>>>>>> cfc9beb386e8f33888c928d81881b69962b0dbc0

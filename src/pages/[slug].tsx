@@ -8,14 +8,18 @@ import PageTemplate from 'templates/Pages'
 //aqui gera cada pagina, através de um template:
 export default function Page({ heading, body }) {
   const router = useRouter()
-  //retorna um loading enquanto esta sendo criado:
+
+  //aqui retorna um loading enquanto esta sendo criado:
   if (router.isFallback) return null
+
   return <PageTemplate heading={heading} body={body} />
 }
 
 // gera as URL´s em build time:
 export async function getStaticPaths() {
-  const { pages } = await client.request<GetPagesQuery>(GET_PAGES, { first: 3 })
+  const { pages } = await client.request<GetPagesQuery>(GET_PAGES, {
+    first: 3 //só tá gerando as 3 primeiras paginas.. (e usando fallback)
+  })
   const paths = pages.map(({ slug }) => ({
     params: { slug }
   }))
@@ -27,7 +31,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { page } = await client.request<GetPageBySlugQuery>(GET_PAGE_BY_SLUG, {
     slug: `${params?.slug}`
   })
-
+  // se os dados não existirem retorna 404:
   if (!page) return { notFound: true }
 
   return {

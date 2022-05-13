@@ -12,8 +12,13 @@ module.exports = withPWA({
     runtimeCaching,
     disable: !isProd
   },
+<<<<<<< HEAD
   compiler: {
     // ssr and displayName are configured by default
     styledComponents: true,
+=======
+  images: {
+    domains: ['media.graphassets.com'],
+>>>>>>> cfc9beb386e8f33888c928d81881b69962b0dbc0
   },
 })
