@@ -8,12 +8,12 @@ import Head from 'next/head'
 // PrimeReact.inputStyle = 'filled'
 // PrimeReact.ripple = true
 import GlobalStyles from 'styles/global'
-// import Layout from '../components/layout'
+import Layout from '../components/Layout/'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     // Layout 'persist' across all pages
-    // <Layout>
+    <Layout>
     <>
       <Head>
         <title>GPU-Next</title>
@@ -26,7 +26,7 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Component {...pageProps} />
     </>
-    // </Layout>
+</Layout>
   )
 }
 

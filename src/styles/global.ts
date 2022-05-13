@@ -35,6 +35,10 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: var(--highlight);
   }
+
+  footer { 
+    background-color: 'white'
+  }
 `
 
 export default GlobalStyles

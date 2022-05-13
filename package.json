@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@graphql-codegen/cli": "^2.6.2",
+    "@material-ui/icons": "^4.11.3",
     "@styled-icons/evaicons-outline": "^10.34.0",
     "@styled-icons/material": "^10.34.0",
     "graphql": "^16.3.0",

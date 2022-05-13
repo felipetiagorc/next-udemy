@@ -11,5 +11,9 @@ module.exports = withPWA({
     dest: 'public',
     runtimeCaching,
     disable: !isProd
-  }
+  },
+  compiler: {
+    // ssr and displayName are configured by default
+    styledComponents: true,
+  },
 })
