@@ -16,14 +16,11 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@graphql-codegen/cli": "^2.6.2",
-<<<<<<< HEAD
     "@material-ui/icons": "^4.11.3",
     "@styled-icons/evaicons-outline": "^10.34.0",
     "@styled-icons/material": "^10.34.0",
-=======
     "autoprefixer": "^10.4.4",
     "framer-motion": "^6.3.2",
->>>>>>> cfc9beb386e8f33888c928d81881b69962b0dbc0
     "graphql": "^16.3.0",
     "graphql-request": "^4.2.0",
     "leaflet": "^1.7.1",
