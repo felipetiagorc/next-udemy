@@ -14,6 +14,7 @@ export const getStaticProps = async () => {
   // esse places vai subir pro Home, ser passado pro HomeTemplate, e lá no template
   // vai receber esse places, jogar pro Mapa, e o Mapa renderiza.
   return {
+    revalidate: 5, // só isso pra adicionar "ISR" Incremental Static Reval
     props: {
       places
     }

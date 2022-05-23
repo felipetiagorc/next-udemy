@@ -3,81 +3,17 @@ import * as S from './styles'
 const Sidebar = () => {
   return (
     <S.SidebarContainer>
-      <SidebarWrapper>
-        <SidebarMenu>
-          <SidebarTitle>Dashboard</SidebarTitle>
-          <SidebarList>
-            <SidebarListItem>
-              <MyLineStyle />
-              Home
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyTimeline />
-              Analytics
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyTrendingUp />
-              Sales
-            </SidebarListItem>
-          </SidebarList>
-        </SidebarMenu>
-        <SidebarMenu>
-          <SidebarTitle>All Menu</SidebarTitle>
-          <SidebarList>
-            <SidebarListItem>
-              <MyPermIdentity />
-              Users
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyStorefront />
-              Products
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyAssessment />
-              Reports
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyLocalAtm />
-              Transactions
-            </SidebarListItem>
-          </SidebarList>
-        </SidebarMenu>
-        <SidebarMenu>
-          <SidebarTitle>Connect</SidebarTitle>
-          <SidebarList>
-            <SidebarListItem>
-              <MyDrafts />
-              Mail
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyFeedback />
-              Feedback
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyForum />
-              Messages
-            </SidebarListItem>
-          </SidebarList>
-        </SidebarMenu>
-        <SidebarMenu>
-          <SidebarTitle>Employees</SidebarTitle>
-          <SidebarList>
-            <SidebarListItem>
-              <MyWork />
-              Manage
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyPieChart />
-              Analytics
-            </SidebarListItem>
-            <SidebarListItem>
-              <MyReceipt />
-              Reports
-            </SidebarListItem>
-          </SidebarList>
-        </SidebarMenu>
-      </SidebarWrapper>
-    </SidebarContainer>
+      <S.SidebarWrapper>
+        <S.SidebarMenu>
+          <S.SidebarTitle>Dashboard</S.SidebarTitle>
+          <S.SidebarList>
+            <S.SidebarListItem>Home</S.SidebarListItem>
+            <S.SidebarListItem>Analytics</S.SidebarListItem>
+            <S.SidebarListItem>Sales</S.SidebarListItem>
+          </S.SidebarList>
+        </S.SidebarMenu>
+      </S.SidebarWrapper>
+    </S.SidebarContainer>
   )
 }
 export default Sidebar

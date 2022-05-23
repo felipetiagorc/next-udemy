@@ -36,11 +36,6 @@ const GlobalStyles = createGlobalStyle`
     color: var(--highlight);
   }
 
-<<<<<<< HEAD:src/styles/global.ts
-  footer { 
-    background-color: 'white'
-  }
-=======
   header {
     grid-area: cabecalho;	// dando nome para as areas
   }
@@ -59,14 +54,13 @@ const GlobalStyles = createGlobalStyle`
       grid-template-columns: 300px 1fr;	// 2 coluna = primeira coluna 100px + resto
       grid-template-rows: 100px 1fr 100px;	// 3 linhas = 100px(cabeçalho) + Conteúdo + Rodapé
       grid-template-areas:	// define como organizar os elementos na tela (desenhando)
-          'cabecalho cabecalho'	
-          'navegacao conteudo'	
-          'rodape rodape';	
+          'nav cabecalho'	
+          'nav conteudo'	
+          'nav rodape';	
   }
 
 
 
->>>>>>> cfc9beb386e8f33888c928d81881b69962b0dbc0:src/styles/global-old.ts
 `
 
 export default GlobalStyles

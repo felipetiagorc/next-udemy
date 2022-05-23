@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const SidebarContainer = styled.div`
   flex: 1;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   background-color: rgb(251, 251, 255);
   position: sticky;
   top: 50px;
@@ -32,46 +32,40 @@ export const SidebarListItem = styled.li`
     background-color: rgb(240, 240, 255);
   }
 `
-export const sharedStyle = css`
-  margin-right: 5px;
-  font-size: 20px !important;
-`
-export const MyLineStyle = styled(LineStyle)`
-  ${sharedStyle}
-`
-export const MyTimeline = styled(Timeline)`
-  ${sharedStyle}
-`
-export const MyTrendingUp = styled(TrendingUp)`
-  ${sharedStyle}
-`
-export const MyPermIdentity = styled(PermIdentity)`
-  ${sharedStyle}
-`
-export const MyStorefront = styled(Storefront)`
-  ${sharedStyle}
-`
-export const MyAssessment = styled(Assessment)`
-  ${sharedStyle}
-`
-export const MyLocalAtm = styled(LocalAtm)`
-  ${sharedStyle}
-`
-export const MyDrafts = styled(Drafts)`
-  ${sharedStyle}
-`
-export const MyFeedback = styled(Feedback)`
-  ${sharedStyle}
-`
-export const MyForum = styled(Forum)`
-  ${sharedStyle}
-`
-export const MyWork = styled(Work)`
-  ${sharedStyle}
-`
-export const MyPieChart = styled(PieChart)`
-  ${sharedStyle}
-`
-export const MyReceipt = styled(Receipt)`
-  ${sharedStyle}
-`
+
+// export const MyTimeline = styled(Timeline)`
+//   ${sharedStyle}
+// `
+// export const MyTrendingUp = styled(TrendingUp)`
+//   ${sharedStyle}
+// `
+// export const MyPermIdentity = styled(PermIdentity)`
+//   ${sharedStyle}
+// `
+// export const MyStorefront = styled(Storefront)`
+//   ${sharedStyle}
+// `
+// export const MyAssessment = styled(Assessment)`
+//   ${sharedStyle}
+// `
+// export const MyLocalAtm = styled(LocalAtm)`
+//   ${sharedStyle}
+// `
+// export const MyDrafts = styled(Drafts)`
+//   ${sharedStyle}
+// `
+// export const MyFeedback = styled(Feedback)`
+//   ${sharedStyle}
+// `
+// export const MyForum = styled(Forum)`
+//   ${sharedStyle}
+// `
+// export const MyWork = styled(Work)`
+//   ${sharedStyle}
+// `
+// export const MyPieChart = styled(PieChart)`
+//   ${sharedStyle}
+// `
+// export const MyReceipt = styled(Receipt)`
+//   ${sharedStyle}
+// `
