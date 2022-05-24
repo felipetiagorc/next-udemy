@@ -1,16 +1,25 @@
 import styled from 'styled-components'
 
 export const SidebarContainer = styled.div`
-  flex: 1;
-  height: calc(100vh - 100px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 13%;
+  min-width: 180px;
   background-color: rgb(251, 251, 255);
-  position: sticky;
-  top: 50px;
+  background-color: red;
 `
 export const SidebarWrapper = styled.div`
   padding: 20px;
   color: #555;
 `
+export const SidebarSearch = styled.input`
+  font-size: 1.3rem;
+  border: none;
+  background: papayawhip;
+`
+
 export const SidebarMenu = styled.div`
   margin-bottom: 10px;
 `

@@ -4,6 +4,7 @@ const Sidebar = () => {
   return (
     <S.SidebarContainer>
       <S.SidebarWrapper>
+        <S.SidebarSearch />
         <S.SidebarMenu>
           <S.SidebarTitle>Dashboard</S.SidebarTitle>
           <S.SidebarList>
