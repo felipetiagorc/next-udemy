@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import Layout from '../components/Layout/'
 // import 'primereact/resources/themes/bootstrap4-light-blue/theme.css' //theme
 // import 'primereact/resources/primereact.min.css' //core css
 // import 'primeicons/primeicons.css'
@@ -8,7 +9,7 @@ import Head from 'next/head'
 // PrimeReact.inputStyle = 'filled'
 // PrimeReact.ripple = true
 // import GlobalStyles from 'styles/global'
-import Layout from '../components/Layout/'
+import './../styles/global.css' //tailwind
 
 function App({ Component, pageProps }: AppProps) {
   return (

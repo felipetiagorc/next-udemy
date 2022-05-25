@@ -1,15 +1,3 @@
-/**
-Usando Modules CSS: 
-Temos o 'styles/global.css' que já é importado para o '_app.js'
-Aqui importamos os módulos CSS dessa maneira:
-
-   @import './Home.module.css';  
-
-*/
-
-
-@import 'tailwindcss/tailwind.css';
-
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
