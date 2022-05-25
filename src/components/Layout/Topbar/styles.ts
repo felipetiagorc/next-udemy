@@ -4,7 +4,7 @@ export const TopbarContainer = styled.div`
   width: 100%;
   height: 50px;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
 `
@@ -14,6 +14,7 @@ export const TopbarWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 `
 export const Logo = styled.span`
   font-weight: bold;
@@ -55,6 +56,7 @@ export const Avatar = styled.img`
 `
 export const Topbar = styled.header`
   height: 10vh;
+  position: fixed;
   max-width: var(--container);
   margin: auto;
   font-size: var(--medium);

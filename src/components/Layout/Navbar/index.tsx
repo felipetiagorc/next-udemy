@@ -1,8 +1,21 @@
-import React from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import Link from 'next/link';
+import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { useStateContext } from '../contexts/ContextProvider';
+import { links } from './../../../data/dummy';
+
 const Sidebar = () => {
-  // const [activeMenu, setActiveMenu] = useState(false)
-  const activeMenu = true
+  const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
+
+  const handleCloseSideBar = () => {
+    if (activeMenu !== undefined && screenSize <= 900) {
+      setActiveMenu(false);
+    }
+  };
+
+  const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
+  const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
+  
   return (
     <>
       <div className="bg-slate-400 ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
@@ -19,13 +32,31 @@ const Sidebar = () => {
                 <GiHamburgerMenu />
               </button>
             </div>
-            <div className="mt-10">
-              {['link1', 'link2', 'link3'].map((item) => (
-                <div className="text-gray-400 m-3 mt-4 uppercase">
-                  {item.toString()}
-                </div>
-              ))}
-            </div>
+            <div className="mt-10 ">
+            {links.map((item) => (
+              <div key={item.title}>
+                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
+                  {item.title}
+                </p>
+                {item.links.map((link) => (
+        <Link 
+                    href={`/${link.name}`}
+                    key={link.name}
+                    >
+                      <a onClick={handleCloseSideBar}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  
+                  >{link.icon}</a>
+                    
+                    <span className="capitalize ">{link.name}</span>
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
           </>
         )}
       </div>

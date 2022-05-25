@@ -9,7 +9,7 @@ import Layout from '../components/Layout/'
 // PrimeReact.inputStyle = 'filled'
 // PrimeReact.ripple = true
 // import GlobalStyles from 'styles/global'
-import './../styles/global.css' //tailwind
+import './../styles/global.css'; //tailwind
 
 function App({ Component, pageProps }: AppProps) {
   return (
