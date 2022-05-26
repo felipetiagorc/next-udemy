@@ -1,9 +1,27 @@
+import { useStateContext } from '../../contexts/ThemeProvider'
 import Footer from './Footer'
-import Navbar from './Navbar/'
+import Navbar from './Navbar'
 import Topbar from './Topbar'
 
 export default function Layout({ children }) {
-  const activeMenu = true
+  const {
+    setCurrentColor,
+    setCurrentMode,
+    currentMode,
+    activeMenu,
+    currentColor,
+    themeSettings,1
+    setThemeSettings
+  } = useStateContext()
+
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem('colorMode')
+    const currentThemeMode = localStorage.getItem('themeMode')
+    if (currentThemeColor && currentThemeMode) {
+      setCurrentColor(currentThemeColor)
+      setCurrentMode(currentThemeMode)
+    }
+  }, [])
   return (
     <>
       <Topbar />
@@ -24,7 +42,7 @@ export default function Layout({ children }) {
           Navbar
         </div>
       </div>
- 
+
       <main className="main">{children}</main>
       <Footer />
     </>
