@@ -1,5 +1,5 @@
+import { setCookies } from 'cookies-next'
 import React, { createContext, useContext, useState } from 'react'
-
 const ThemeContext = createContext()
 
 const initialState = {
@@ -19,12 +19,12 @@ export const ThemeProvider = ({ children }) => {
 
   const setMode = (e) => {
     setCurrentMode(e.target.value)
-    localStorage.setItem('themeMode', e.target.value)
+    setCookies('themeMode', e.target.value)
   }
 
   const setColor = (color) => {
     setCurrentColor(color)
-    localStorage.setItem('colorMode', color)
+    setCookies('colorMode', color)
   }
 
   const handleClick = (clicked) =>

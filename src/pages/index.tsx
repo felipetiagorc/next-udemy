@@ -1,7 +1,32 @@
-export default function () {
+import { useThemeContext } from 'contexts/ThemeProvider'
+import { getCookie } from 'cookies-next'
+
+export default function Home() {
+  const {
+    setCurrentColor,
+    setCurrentMode,
+    currentMode,
+    activeMenu,
+    currentColor,
+    themeSettings
+    // setThemeSettings
+  } = useThemeContext()
+
   return (
     <>
-      <div>Oi</div>
+      <div>Aqui seria a Home</div>
     </>
   )
+}
+
+export const getServerSideProps = ({ req, res }) => {
+  const currentThemeColor = getCookie('colorMode')
+  const currentThemeMode = getCookie('themeMode')
+  if (currentThemeColor && currentThemeMode) {
+    req.setCurrentColor(currentThemeColor)
+    req.setCurrentMode(currentThemeMode)
+  }
+  return {
+    props: {}
+  }
 }

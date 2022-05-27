@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { useStateContext } from '../../../contexts/ContextProvider'
+import { useThemeContext } from '../../../contexts/ThemeProvider'
 import { links } from '../../../data/dummy'
 
 const Sidebar = () => {
   const { currentColor, activeMenu, setActiveMenu, screenSize } =
-    useStateContext()
+    useThemeContext()
 
   const handleCloseSideBar = () => {
     if (activeMenu !== undefined && screenSize <= 900) {

@@ -1,27 +1,16 @@
-import { useStateContext } from '../../contexts/ThemeProvider'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Topbar from './Topbar'
 
 export default function Layout({ children }) {
-  const {
-    setCurrentColor,
-    setCurrentMode,
-    currentMode,
-    activeMenu,
-    currentColor,
-    themeSettings,1
-    setThemeSettings
-  } = useStateContext()
-
-  useEffect(() => {
-    const currentThemeColor = localStorage.getItem('colorMode')
-    const currentThemeMode = localStorage.getItem('themeMode')
-    if (currentThemeColor && currentThemeMode) {
-      setCurrentColor(currentThemeColor)
-      setCurrentMode(currentThemeMode)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const currentThemeColor = getCookie('colorMode')
+  //   const currentThemeMode = getCookie('themeMode')
+  //   if (currentThemeColor && currentThemeMode) {
+  //     setCurrentColor(currentThemeColor)
+  //     setCurrentMode(currentThemeMode)
+  //   }
+  // }, [])
   return (
     <>
       <Topbar />
