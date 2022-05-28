@@ -8,8 +8,8 @@ export default function Home() {
     currentMode,
     activeMenu,
     currentColor,
-    themeSettings
-    // setThemeSettings
+    themeSettings,
+    setThemeSettings
   } = useThemeContext()
 
   return (
@@ -20,8 +20,8 @@ export default function Home() {
 }
 
 export const getServerSideProps = ({ req, res }) => {
-  const currentThemeColor = getCookie('colorMode')
-  const currentThemeMode = getCookie('themeMode')
+  const currentThemeColor = getCookie('colorMode', { req, res })
+  const currentThemeMode = getCookie('themeMode', { req, res })
   if (currentThemeColor && currentThemeMode) {
     req.setCurrentColor(currentThemeColor)
     req.setCurrentMode(currentThemeMode)
